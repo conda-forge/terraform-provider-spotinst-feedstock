@@ -1,10 +1,10 @@
 {% set provider= "Spotinst" %}
-{% set version = "0.1.0" %}
+{% set version = "1.0.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "692c8c8f51f32808c86e52cc82dbb1ec20bb3e39fa7e077e3797a508f70e15c6" %}
+{% set sha256 = "cddac80506db45556252ee6c6eefba6bb140c3a7b72fe9e57db835949124e272" %}
 {% set sha256_win32 = "d389f46de760d97d71dc636331ad1e5c78f922e9d6de339eb3f3adbab640edc5" %}
 {% set sha256_win64 = "bb4cb9a11a63877c82a43c0a2654f41bf2c4a26f2083fc10a1683ca8347e320d" %}
 
