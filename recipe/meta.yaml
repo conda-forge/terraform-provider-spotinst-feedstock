@@ -1,5 +1,5 @@
 {% set provider = "Spotinst" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
@@ -11,13 +11,13 @@ package:
 source:
   - folder: src/github.com/terraform-providers/{{ name|lower }}
     url: https://github.com/terraform-providers/{{ name }}/archive/v{{ version }}.tar.gz  # [not win]
-    sha256: 2a9293a198feafd7265cbb195265abc490d0f9f78fa45fac8c34f584a6e0e0cb  # [not win]
+    sha256: c94d16b3e1263358473d63cedf0e7af9fbb12c0445c67abfced27c636191502a  # [not win]
 
     url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
-    sha256: 581679ab5e4dec432ef7bc47e6cf52bb03e5ddbd02e42c580d26cbd6392139ab  # [win64]
+    sha256: 2c321b2d550211f5ed1a8e16d4f14af5b8065f4a4bcbfd0a18de5c5f2c606b85  # [win64]
 
 build:
-  number: 1
+  number: 0
   script:
     - XCOPY src\github.com\terraform-providers\{{ name|lower }}\{{ x4_plugin }}.exe %LIBRARY_BIN%  # [win]
 
