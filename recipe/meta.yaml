@@ -1,6 +1,6 @@
 {% set provider = "Spotinst" %}
 {% set goname = "github.com/terraform-providers/terraform-provider-"+provider.lower() %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 {% set name = goname.split('/')[-1] %}
 {% set pkg_src = ('src/'+goname).replace("/",os.sep) %}
@@ -14,7 +14,7 @@ package:
 source:
   - folder:  {{ pkg_src }}
     url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-    sha256: 2a426bf4f3e38597693615e89859b2122e52035e3344ea5a1d5c68b06c061875
+    sha256: 1e1beb66a2d1ab21d259e75f25cc70826446f94aada90a9ebb5d1b8bf5439f1c
 
 
 build:
